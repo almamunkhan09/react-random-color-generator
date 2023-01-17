@@ -9,7 +9,7 @@ import { useState } from 'react';
 const mainStyle = css`
   margin: auto;
   max-width: 500px;
-  min-width: 400;
+  min-width: 400px;
   min-height: 400px;
   margin-top: 20px;
   padding: 10px;
@@ -21,6 +21,7 @@ const mainStyle = css`
   transition: all 0.4s ease-in-out;
 `;
 
+// Define custom style for select hue and light
 const selectHueLight = css`
   min-width: 80px;
   min-height: 30px;
@@ -31,7 +32,7 @@ const selectHueLight = css`
   font-weight: bold;
 `;
 
-// Define the custom style for Button Component
+// Define the custom style for Submit button Component
 const Button = styled.button`
   width: 200px;
   height: 50px;
@@ -40,7 +41,7 @@ const Button = styled.button`
   font-weight: 600;
   color: #130a42;
   background-color: #6bb679;
-
+  margin-top: 20px;
   border-radius: 50px;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
@@ -58,34 +59,34 @@ export default function Main() {
   const generateRandomColor = (inputLuminosity = ' ', inputHue = ' ') => {
     return randomcolor({ luminosity: inputLuminosity, hue: inputHue });
   };
-  // Function that track the change in the color input color at the time of state change
+  // Function that track the input color
   const trackColor = (event) => {
     setInputColor(event.currentTarget.value);
   };
+  // Function that track Luminosity label
   const trackLuminosity = (event) => {
     setLuminosity(event.currentTarget.value);
   };
-
+  // Function to change the background color on each submit
   const handleSubmit = (event) => {
     event.preventDefault();
-    setColorHexCode(generateRandomColor(inputColor, luminosity).toUpperCase());
+    console.log(inputColor.luminosity);
+    setColorHexCode(generateRandomColor(luminosity, inputColor).toUpperCase());
   };
+
   return (
     <div
       css={css`
         ${mainStyle};
-        background-color: ${colorHexCode};
+        background-color: ${colorHexCode}; // Dynamic changing of background color
       `}
     >
       <h1> Generate Color: {colorHexCode}</h1>
-      {/* <Button className="button" onClick={changeColor}>
-        Generate Color
-      </Button> */}
-
       <form onSubmit={handleSubmit}>
         <div>
           Color:
           <select css={selectHueLight} onChange={trackColor}>
+            <option value="">Default</option>
             <option value="red">Red</option>
             <option value="green">Green</option>
             <option value="Blue">Blue</option>
@@ -94,6 +95,7 @@ export default function Main() {
         <div>
           Luminosity:
           <select css={selectHueLight} onChange={trackLuminosity}>
+            <option value="">Default</option>
             <option value="light">Light</option>
             <option value="bright">Bright</option>
             <option value="dark">Dark</option>
