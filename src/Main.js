@@ -59,7 +59,7 @@ export default function Main() {
             <option value="dark">Dark</option>
           </select>
         </div>
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Generate</Button>
       </form>
     </div>
   );
