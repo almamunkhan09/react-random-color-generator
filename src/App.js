@@ -1,5 +1,11 @@
+import Main from './Main';
+
 function App() {
-  return <>Hello From the React App</>;
+  return (
+    <div className="main">
+      <Main />
+    </div>
+  );
 }
 
 export default App;
