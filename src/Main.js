@@ -1,54 +1,12 @@
 /** @jsxImportSource @emotion/react */
 
+// Import Packages
+
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
 import randomcolor from 'randomcolor';
 import { useState } from 'react';
-
-// Defining the custom style for the main component
-const mainStyle = css`
-  margin: auto;
-  max-width: 500px;
-  min-width: 400px;
-  min-height: 400px;
-  margin-top: 20px;
-  padding: 10px;
-  color: black;
-  border: solid 1px;
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-  transition: all 0.4s ease-in-out;
-`;
-
-// Define custom style for select hue and light
-const selectHueLight = css`
-  min-width: 80px;
-  min-height: 30px;
-  border-radius: 5px;
-  background-color: #4c37b9;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-`;
-
-// Define the custom style for Submit button Component
-const Button = styled.button`
-  width: 200px;
-  height: 50px;
-  padding: 5px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #130a42;
-  background-color: #6bb679;
-  margin-top: 20px;
-  border-radius: 50px;
-  transition: all 0.4s ease-in-out;
-  cursor: pointer;
-  &:hover {
-    color: white;
-  }
-`;
+// import Constants for css styles
+import { Button, mainStyle, selectHueLight } from './MainCSS';
 
 export default function Main() {
   // Intiate the background color as Hexcode

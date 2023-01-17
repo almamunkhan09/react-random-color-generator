@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Node Sentiment Analysis CLI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This node js cli analyze your sentiment and emotion. Sounds interesting? Lets try
 
-## Available Scripts
+## Authors
 
-In the project directory, you can run:
+- [@al mamun khan](https://github.com/almamunkhan09)
 
 ### `yarn start`
 
