@@ -29,7 +29,7 @@ export default function Main() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputColor.luminosity);
-    setColorHexCode(generateRandomColor(luminosity, inputColor).toUpperCase());
+    setColorHexCode(generateRandomColor(luminosity, inputColor));
   };
 
   return (
