@@ -6,12 +6,26 @@ import styled from '@emotion/styled';
 const body = css`
   margin: 0;
   padding: 0;
+  min-width: 400px;
+  min-height: 400px;
+  max-width: 500px;
+  max-height: 500px;
+  border: solid 2px;
   color: black;
   text-align: center;
   font-size: 22px;
   font-weight: bold;
   transition: all 0.4s ease-in-out;
   height: 100vh;
+  background-color: gray;
+`;
+
+const generate = css`
+  margin: auto;
+  padding: 20px;
+  max-width: 300px;
+  min-height: 50px;
+  border-radius: 20px;
 `;
 
 // Define custom style for select hue and light
@@ -43,4 +57,4 @@ const Button = styled.button`
   }
 `;
 
-export { body, Button, selectHueLight };
+export { body, Button, generate, selectHueLight };

@@ -6,11 +6,11 @@ import { css } from '@emotion/react';
 import randomcolor from 'randomcolor';
 import { useState } from 'react';
 // import Constants for css styles
-import { body, Button, selectHueLight } from './MainCSS';
+import { body, Button, generate, selectHueLight } from './MainCSS';
 
 export default function Main() {
   // Intiate the background color as Hexcode
-  const [colorHexCode, setColorHexCode] = useState('#9fa8a3');
+  const [colorHexCode, setColorHexCode] = useState('#343f71');
   const [luminosity, setLuminosity] = useState('');
   const [inputColor, setInputColor] = useState('');
   // Define a function that Generate color HexCode using randomcolor
@@ -36,13 +36,17 @@ export default function Main() {
     <div
       css={css`
         ${body};
-        background-color: ${colorHexCode};
       `}
     >
-      {' '}
-      Generated Color:
+      <div
+        css={css`
+          ${generate};
+          background-color: ${colorHexCode};
+        `}
+      >
+        Generated Color: {colorHexCode}
+      </div>
       <div>
-        {' '}
         <form onSubmit={handleSubmit}>
           <div>
             Color:
