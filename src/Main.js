@@ -39,7 +39,7 @@ export default function Main() {
         background-color: ${colorHexCode}; // Dynamic changing of background color
       `}
     >
-      <h1> Generated Color: {colorHexCode}</h1>
+      <div>Generated Color: {colorHexCode}</div>
       <form onSubmit={handleSubmit}>
         <div>
           Color:
