@@ -3,16 +3,15 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 // Defining the custom style for the main component
-const mainStyle = css`
-  margin: auto;
-  margin-top: 20px;
-  padding: 10px;
+const body = css`
+  margin: 0;
+  padding: 0;
   color: black;
-  border: solid 1px;
   text-align: center;
   font-size: 22px;
   font-weight: bold;
   transition: all 0.4s ease-in-out;
+  height: 100vh;
 `;
 
 // Define custom style for select hue and light
@@ -44,4 +43,4 @@ const Button = styled.button`
   }
 `;
 
-export { Button, mainStyle, selectHueLight };
+export { body, Button, selectHueLight };

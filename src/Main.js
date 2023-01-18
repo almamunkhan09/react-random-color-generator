@@ -6,7 +6,7 @@ import { css } from '@emotion/react';
 import randomcolor from 'randomcolor';
 import { useState } from 'react';
 // import Constants for css styles
-import { Button, mainStyle, selectHueLight } from './MainCSS';
+import { body, Button, selectHueLight } from './MainCSS';
 
 export default function Main() {
   // Intiate the background color as Hexcode
@@ -35,13 +35,13 @@ export default function Main() {
   return (
     <div
       css={css`
-        ${mainStyle};
+        ${body};
         background-color: ${colorHexCode}; // Dynamic changing of background color
       `}
     >
       <div>Generated Color: {colorHexCode}</div>
       <form onSubmit={handleSubmit}>
-        {/* <div>
+        <div>
           Color:
           <select css={selectHueLight} onChange={trackColor}>
             <option value="">Default</option>
@@ -58,7 +58,7 @@ export default function Main() {
             <option value="bright">Bright</option>
             <option value="dark">Dark</option>
           </select>
-        </div> */}
+        </div>
         <Button type="submit">Generate</Button>
       </form>
     </div>
