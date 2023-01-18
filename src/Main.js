@@ -41,7 +41,7 @@ export default function Main() {
     >
       <div>Generated Color: {colorHexCode}</div>
       <form onSubmit={handleSubmit}>
-        <div>
+        {/* <div>
           Color:
           <select css={selectHueLight} onChange={trackColor}>
             <option value="">Default</option>
@@ -58,7 +58,7 @@ export default function Main() {
             <option value="bright">Bright</option>
             <option value="dark">Dark</option>
           </select>
-        </div>
+        </div> */}
         <Button type="submit">Generate</Button>
       </form>
     </div>
