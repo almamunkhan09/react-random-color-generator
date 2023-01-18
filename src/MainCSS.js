@@ -4,20 +4,20 @@ import styled from '@emotion/styled';
 
 // Defining the custom style for the main component
 const body = css`
-  margin: 0;
+  margin: auto;
   padding: 0;
+  width: 50%;
   min-width: 400px;
   min-height: 400px;
   max-width: 500px;
   max-height: 500px;
-  border: solid 2px;
   color: black;
   text-align: center;
   font-size: 22px;
   font-weight: bold;
   transition: all 0.4s ease-in-out;
   height: 100vh;
-  background-color: gray;
+  background-color: #fbc40e;
 `;
 
 const generate = css`
@@ -45,6 +45,8 @@ const Button = styled.button`
   height: 50px;
   padding: 5px;
   font-size: 16px;
+  margin-top: auto;
+  margin-bottom: 40px;
   font-weight: 600;
   color: #130a42;
   background-color: #6bb679;
