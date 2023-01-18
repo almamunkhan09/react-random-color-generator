@@ -1,6 +1,6 @@
-# Node Sentiment Analysis CLI
+# React Random color Generator
 
-This node js cli analyze your sentiment and emotion. Sounds interesting? Lets try
+This a react app that changes background color
 
 ## Authors
 
