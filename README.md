@@ -1,6 +1,6 @@
 # React Random color Generator
 
-This a react app that changes background color
+This is react application. That generates a meme based on text provided by the user. Also it provides a user options to chose a template from existing template.
 
 ## Authors
 
