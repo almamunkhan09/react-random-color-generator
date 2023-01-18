@@ -10,7 +10,7 @@ import { body, Button, selectHueLight } from './MainCSS';
 
 export default function Main() {
   // Intiate the background color as Hexcode
-  const [colorHexCode, setColorHexCode] = useState('');
+  const [colorHexCode, setColorHexCode] = useState('#9fa8a3');
   const [luminosity, setLuminosity] = useState('');
   const [inputColor, setInputColor] = useState('');
   // Define a function that Generate color HexCode using randomcolor
@@ -36,31 +36,35 @@ export default function Main() {
     <div
       css={css`
         ${body};
-        background-color: ${colorHexCode}; // Dynamic changing of background color
+        background-color: ${colorHexCode};
       `}
     >
+      {' '}
       Generated Color:
-      <form onSubmit={handleSubmit}>
-        <div>
-          Color:
-          <select css={selectHueLight} onChange={trackColor}>
-            <option value="">Default</option>
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="Blue">Blue</option>
-          </select>
-        </div>
-        <div>
-          Luminosity:
-          <select css={selectHueLight} onChange={trackLuminosity}>
-            <option value="">Default</option>
-            <option value="light">Light</option>
-            <option value="bright">Bright</option>
-            <option value="dark">Dark</option>
-          </select>
-        </div>
-        <Button type="submit">Generate</Button>
-      </form>
+      <div>
+        {' '}
+        <form onSubmit={handleSubmit}>
+          <div>
+            Color:
+            <select css={selectHueLight} onChange={trackColor}>
+              <option value="">Default</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="Blue">Blue</option>
+            </select>
+          </div>
+          <div>
+            Luminosity:
+            <select css={selectHueLight} onChange={trackLuminosity}>
+              <option value="">Default</option>
+              <option value="light">Light</option>
+              <option value="bright">Bright</option>
+              <option value="dark">Dark</option>
+            </select>
+          </div>
+          <Button type="submit">Generate</Button>
+        </form>
+      </div>
     </div>
   );
 }
