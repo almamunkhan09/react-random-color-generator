@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
 
 // Defining the custom style for the main component
 const body = css`
@@ -40,17 +39,15 @@ const selectHueLight = css`
 `;
 
 // Define the custom style for Submit button Component
-const Button = styled.button`
+const newButton = css`
   width: 200px;
   height: 50px;
   padding: 5px;
   font-size: 16px;
-  margin-top: auto;
-  margin-bottom: 40px;
   font-weight: 600;
   color: #130a42;
   background-color: #6bb679;
-  margin-top: 20px;
+  margin: auto;
   border-radius: 50px;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
@@ -59,4 +56,4 @@ const Button = styled.button`
   }
 `;
 
-export { body, Button, generate, selectHueLight };
+export { body, generate, newButton, selectHueLight };

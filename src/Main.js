@@ -6,7 +6,7 @@ import { css } from '@emotion/react';
 import randomcolor from 'randomcolor';
 import { useState } from 'react';
 // import Constants for css styles
-import { body, Button, generate, selectHueLight } from './MainCSS';
+import { body, generate, newButton, selectHueLight } from './MainCSS';
 
 export default function Main() {
   // Intiate the background color as Hexcode
@@ -28,7 +28,6 @@ export default function Main() {
   // Function to change the background color on each submit
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(inputColor.luminosity);
     setColorHexCode(generateRandomColor(luminosity, inputColor));
   };
 
@@ -66,7 +65,7 @@ export default function Main() {
               <option value="dark">Dark</option>
             </select>
           </div>
-          <Button type="submit">Generate</Button>
+          <button css={newButton}>Generate</button>
         </form>
       </div>
     </div>
